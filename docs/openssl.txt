@@ -1,0 +1,4 @@
+Git:
+C:\Program Files\Git\usr\bin\openssl.exe
+
+https://wiki.openssl.org/index.php/Binaries

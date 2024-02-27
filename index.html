@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let events = new EventSource("/events");
+        // events.addEventListener("counter", ({data}) => console.log(data));
+
+        // events.onmessage = e => {
+        //     console.log(e.data);
+        // };
+
+        events.addEventListener("item", (e) => {
+            console.log(e.data);
+        });
+
+        // events.open = e => {
+        //     console.log("open");
+        // };
+
+        addEventListener("open", (event) => {
+            console.log("open");
+        });
+
+        events.error = e => {
+            console.log(e);
+        };
+    </script>
+</head>
+<body>
+    <h1>Umpa, umpa</h1>
+</body>
+</html>
